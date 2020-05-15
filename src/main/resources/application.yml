@@ -1,0 +1,31 @@
+server:
+  port: 9090
+
+spring:
+  application:
+    name: batch-scheduler
+
+  datasource:
+    hikari:
+      jdbc-url: jdbc:mariadb://140.238.7.127:4006/ondemand
+      driver-class-name: org.mariadb.jdbc.Driver
+      username: ondemand
+      password: xhdgkqvmffotvhaondemand!!
+
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+    generate-ddl: true
+
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
+        type:
+          descriptor:
+            sql:
+              BasicBinder: TRACE
